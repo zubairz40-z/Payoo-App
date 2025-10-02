@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payooo Dashboard</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#f4f5f7]">
+
+  <!-- ===================== TOP WHITE SECTION (Navbar + Title + Cards) ===================== -->
+  <div class="bg-white max-w-lg mx-auto mt-6 p-6 rounded-3xl shadow-2xl">
+
+    <!-- NAVBAR -->
+    <div class="flex justify-between items-center border-b border-gray-200 pb-4 mb-5">
+      <div class="flex items-center">
+        <img src="./assets/Group.png" class="h-14 rounded-xl" alt="logo">
+        <div class="ml-3">
+          <h2 id="available-balance" class="font-bold text-lg text-gray-800">$73000</h2>
+          <p class="text-gray-400 text-sm">Available Balance</p>
+        </div>
+      </div>
+      <button
+        class="flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-gray-200 px-4 py-2 rounded-2xl text-sm font-medium transition">
+        <i class="fa-solid fa-right-from-bracket mr-2 rotate-180"></i> Log Out
+      </button>
+    </div>
+
+    <!-- TITLE / WELCOME -->
+    <div class="text-center mb-6">
+      <h1 class="text-2xl font-bold mb-2 text-gray-800">💳 Welcome to Payooo!</h1>
+      <p class="text-gray-600 text-lg">Fast and convenient financial services with low cashout fees</p>
+    </div>
+
+    <!-- CARDS SECTION (3 per row) -->
+    <div class="grid grid-cols-3 gap-4 text-gray-700">
+
+      <div class="bg-gray-50 rounded-3xl p-5 text-center hover:shadow-2xl transition cursor-pointer" id="card-add-money">
+        <img src="./assets/wallet1.png" class="mx-auto mb-3" alt="Add Money">
+        <h2 class="font-semibold text-base">Add Money</h2>
+      </div>
+
+      <div class="bg-gray-50 rounded-3xl p-5 text-center hover:shadow-2xl transition cursor-pointer" id="card-cashout">
+        <img src="./assets/send1.png" class="mx-auto mb-3" alt="Cashout">
+        <h2 class="font-semibold text-base">Cashout</h2>
+      </div>
+
+      <div class="bg-gray-50 rounded-3xl p-5 text-center hover:shadow-2xl transition cursor-pointer" id="card-transfer">
+        <img src="./assets/money1.png" class="mx-auto mb-3" alt="Transfer Money">
+        <h2 class="font-semibold text-base">Transfer Money</h2>
+      </div>
+
+      <div class="bg-gray-50 rounded-3xl p-5 text-center hover:shadow-2xl transition cursor-pointer" id="card-bonus">
+        <img src="./assets/bonus1.png" class="mx-auto mb-3" alt="Get Bonus">
+        <h2 class="font-semibold text-base">Get Bonus</h2>
+      </div>
+
+      <div class="bg-gray-50 rounded-3xl p-5 text-center hover:shadow-2xl transition cursor-pointer" id="card-paybill">
+        <img src="./assets/purse1.png" class="mx-auto mb-3" alt="Pay Bill">
+        <h2 class="font-semibold text-base">Pay Bill</h2>
+      </div>
+
+      <div class="bg-gray-50 rounded-3xl p-5 text-center hover:shadow-2xl transition cursor-pointer" id="card-transactions">
+        <img src="./assets/transaction1.png" class="mx-auto mb-3" alt="Transactions">
+        <h2 class="font-semibold text-base">Transactions</h2>
+      </div>
+
+    </div>
+  </div>
+<!-- ===================== LATEST PAYMENT SECTION ===================== -->
+<div class="bg-white max-w-lg mx-auto mt-6 p-6 rounded-3xl shadow-2xl">
+  <div class="flex justify-between items-center mb-5">
+    <h2 class="font-bold text-lg text-gray-800">Latest Payments</h2>
+    <a href="#" class="text-blue-500 text-sm font-medium hover:underline">View All</a>
+  </div>
+
+  <!-- Payment List -->
+  <div class="space-y-4">
+    <!-- Item 1 -->
+    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
+      <div class="flex items-center gap-3">
+        <div class="bg-yellow-100 p-3 rounded-full">
+          <i class="fa-solid fa-bolt text-yellow-500 text-lg"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">Electricity Bill</p>
+          <p class="text-gray-400 text-sm">Today 01:44 AM</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical text-gray-400 cursor-pointer"></i>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
+      <div class="flex items-center gap-3">
+        <div class="bg-green-100 p-3 rounded-full">
+          <i class="fa-solid fa-bank text-green-500 text-lg"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">Bank Deposit</p>
+          <p class="text-gray-400 text-sm">Today 12:30 AM</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical text-gray-400 cursor-pointer"></i>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
+      <div class="flex items-center gap-3">
+        <div class="bg-yellow-100 p-3 rounded-full">
+          <i class="fa-solid fa-mobile-screen-button text-yellow-500 text-lg"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">Mobile Recharge</p>
+          <p class="text-gray-400 text-sm">Yesterday 08:15 PM</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical text-gray-400 cursor-pointer"></i>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition">
+      <div class="flex items-center gap-3">
+        <div class="bg-red-100 p-3 rounded-full">
+          <i class="fa-solid fa-gas-pump text-red-500 text-lg"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">Gas Bill</p>
+          <p class="text-gray-400 text-sm">Yesterday 06:50 PM</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical text-gray-400 cursor-pointer"></i>
+    </div>
+  </div>
+</div>
+
+  <!-- ===================== FORMS ===================== -->
+  <div class="max-w-lg mx-auto mt-6 space-y-6">
+
+    <!-- Add Money Form -->
+    <div id="form-add-money" class="hidden">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Add Money</h1>
+      <form class="bg-white rounded-3xl p-8 shadow-2xl space-y-5">
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Select a Bank</label>
+          <select id="bank" class="select w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <option disabled selected>Select your bank</option>
+            <option>BRAC Bank</option>
+            <option>Eastern Bank Limited</option>
+            <option>Dhaka Bank</option>
+            <option>IFIC Bank</option>
+          </select>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Account Number</label>
+          <input type="text" id="account-number" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Amount</label>
+          <input type="number" id="add-amount" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">4-Digit PIN</label>
+          <input type="password" id="pin" maxlength="4" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <button id="add-money-btn" type="submit" class="w-full h-[52px] bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-2xl transition-colors duration-200">Add Money</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Cashout Form -->
+    <div id="form-cashout" class="hidden">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Cashout</h1>
+      <form class="bg-white rounded-3xl p-8 shadow-2xl space-y-5">
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Agent Number</label>
+          <input type="text" id="agent-number" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Amount</label>
+          <input type="number" id="cashout-amount" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">4-Digit PIN</label>
+          <input type="password" id="cashout-pin" maxlength="4" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <button id="cashout-btn" type="submit" class="w-full h-[52px] bg-red-500 hover:bg-red-600 text-white font-semibold rounded-2xl transition-colors duration-200">Cashout</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Transfer Money Form -->
+    <div id="form-transfer" class="hidden">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Transfer Money</h1>
+      <form class="bg-white rounded-3xl p-8 shadow-2xl space-y-5">
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Recipient Number</label>
+          <input type="text" id="transfer-number" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-green-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Amount</label>
+          <input type="number" id="transfer-amount" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-green-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">4-Digit PIN</label>
+          <input type="password" id="transfer-pin" maxlength="4" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-green-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <button id="transfer-btn" type="submit" class="w-full h-[52px] bg-green-500 hover:bg-green-600 text-white font-semibold rounded-2xl transition-colors duration-200">Transfer</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Get Bonus Form -->
+    <div id="form-bonus" class="hidden">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Get Bonus</h1>
+      <form class="bg-white rounded-3xl p-8 shadow-2xl space-y-5">
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Bonus Code</label>
+          <input type="text" id="bonus-code" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">4-Digit PIN</label>
+          <input type="password" id="bonus-pin" maxlength="4" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-yellow-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <button id="bonus-btn" type="submit" class="w-full h-[52px] bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-2xl transition-colors duration-200">Get Bonus</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Pay Bill Form -->
+    <div id="form-paybill" class="hidden">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Pay Bill</h1>
+      <form class="bg-white rounded-3xl p-8 shadow-2xl space-y-5">
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Bill Number</label>
+          <input type="text" id="bill-number" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-purple-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">Amount</label>
+          <input type="number" id="bill-amount" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-purple-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <label class="block text-gray-700 font-medium mb-2">4-Digit PIN</label>
+          <input type="password" id="bill-pin" maxlength="4" class="input w-[354px] h-[52px] bg-gray-100 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-purple-400 focus:outline-none"/>
+        </div>
+        <div class="w-[354px] mx-auto">
+          <button id="bill-btn" type="submit" class="w-full h-[52px] bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-2xl transition-colors duration-200">Pay Bill</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Transactions Form -->
+    <div id="form-transactions" class="hidden">
+      <h1 class="text-2xl font-bold mb-6 text-gray-800 text-center">Transactions</h1>
+      <p class="text-center text-gray-600">Here you can see all past transactions (this section can be linked to backend later)</p>
+    </div>
+
+  </div>
+
+  <script>
+    const validPin = 1234;
+    const balanceElement = document.getElementById("available-balance");
+
+    function hideAllForms() {
+      document.querySelectorAll('[id^="form-"]').forEach(f => f.classList.add("hidden"));
+    }
+
+    // Show form when card clicked
+    document.getElementById("card-add-money").addEventListener("click", () => {
+      hideAllForms();
+      document.getElementById("form-add-money").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("card-cashout").addEventListener("click", () => {
+      hideAllForms();
+      document.getElementById("form-cashout").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("card-transfer").addEventListener("click", () => {
+      hideAllForms();
+      document.getElementById("form-transfer").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("card-bonus").addEventListener("click", () => {
+      hideAllForms();
+      document.getElementById("form-bonus").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("card-paybill").addEventListener("click", () => {
+      hideAllForms();
+      document.getElementById("form-paybill").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById("card-transactions").addEventListener("click", () => {
+      hideAllForms();
+      document.getElementById("form-transactions").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Add Money logic
+    document.getElementById("add-money-btn").addEventListener("click", e => {
+      e.preventDefault();
+      const amount = parseInt(document.getElementById("add-amount").value);
+      const pin = parseInt(document.getElementById("pin").value);
+
+      if (pin !== validPin || isNaN(amount)) {
+        alert("Invalid PIN or amount!");
+        return;
+      }
+      balanceElement.innerText = `$${parseInt(balanceElement.innerText.replace(/\D/g, '')) + amount}`;
+      alert(`Successfully added $${amount}!`);
+    });
+
+    // Cashout logic
+    document.getElementById("cashout-btn").addEventListener("click", e => {
+      e.preventDefault();
+      const amount = parseInt(document.getElementById("cashout-amount").value);
+      const pin = parseInt(document.getElementById("cashout-pin").value);
+      const currentBalance = parseInt(balanceElement.innerText.replace(/\D/g, ''));
+
+      if (pin !== validPin || isNaN(amount) || amount > currentBalance) {
+        alert("Invalid PIN, amount or insufficient balance!");
+        return;
+      }
+      balanceElement.innerText = `$${currentBalance - amount}`;
+      alert(`Successfully cashed out $${amount}!`);
+    });
+
+    // Transfer logic
+    document.getElementById("transfer-btn").addEventListener("click", e => {
+      e.preventDefault();
+      const amount = parseInt(document.getElementById("transfer-amount").value);
+      const pin = parseInt(document.getElementById("transfer-pin").value);
+      const currentBalance = parseInt(balanceElement.innerText.replace(/\D/g, ''));
+
+      if (pin !== validPin || isNaN(amount) || amount > currentBalance) {
+        alert("Invalid PIN, amount or insufficient balance!");
+        return;
+      }
+      balanceElement.innerText = `$${currentBalance - amount}`;
+      alert(`Successfully transferred $${amount}!`);
+    });
+
+    // Bonus logic
+    document.getElementById("bonus-btn").addEventListener("click", e => {
+      e.preventDefault();
+      const pin = parseInt(document.getElementById("bonus-pin").value);
+      if (pin !== validPin) {
+        alert("Invalid PIN!");
+        return;
+      }
+      const bonus = 1000; // Example bonus
+      balanceElement.innerText = `$${parseInt(balanceElement.innerText.replace(/\D/g, '')) + bonus}`;
+      alert(`Bonus $${bonus} added!`);
+    });
+
+    // Pay Bill logic
+    document.getElementById("bill-btn").addEventListener("click", e => {
+      e.preventDefault();
+      const amount = parseInt(document.getElementById("bill-amount").value);
+      const pin = parseInt(document.getElementById("bill-pin").value);
+      const currentBalance = parseInt(balanceElement.innerText.replace(/\D/g, ''));
+
+      if (pin !== validPin || isNaN(amount) || amount > currentBalance) {
+        alert("Invalid PIN, amount or insufficient balance!");
+        return;
+      }
+      balanceElement.innerText = `$${currentBalance - amount}`;
+      alert(`Successfully paid bill $${amount}!`);
+    });
+  </script>
+
+</body>
+</html>

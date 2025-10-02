@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo Mobile App</title>
+
+  <!-- TailwindCSS Official CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="bg-[#f4f5f7] h-screen flex flex-col justify-center items-center">
+
+  <!-- Banner Section -->
+  <div class="h-[130px] w-[300px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center mb-6">
+    <img src="./assets/Group.png" alt="Logo" class="h-16 w-auto">
+  </div>
+
+  <!-- Form Section -->
+  <form class="p-6 rounded-lg bg-white shadow-md space-y-4 w-[350px]">
+    
+    <!-- Mobile Number -->
+    <div>
+      <label class="block mb-1 text-gray-700 font-normal">Mobile Number</label>
+      <input type="text" placeholder="Enter Your Number" id="mobile-number"
+        class="input w-full bg-gray-200 text-gray-700 placeholder-gray-500" />
+    </div>
+
+    <!-- 4 Digit Pin -->
+    <div>
+      <label class="block mb-1 text-gray-700 font-normal">4 Digit Pin</label>
+      <input type="password" placeholder="Enter 4 Digit Pin" id="pin-number"
+        class="input w-full bg-gray-200 text-gray-700 placeholder-gray-500" />
+    </div>
+
+    <!-- Login Button -->
+    <button id="loginButton" 
+      class="btn bg-[#0874f2] w-full normal-case h-10 text-sm rounded-xl text-white">
+      Login
+    </button>
+  </form>
+
+  <!-- JS scripts -->
+  <script src="./script.js"></script>
+</body>
+</html>
